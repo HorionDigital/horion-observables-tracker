@@ -1,23 +1,28 @@
-
-/*
-Horion Hidration - SSR first javascript framework
-Author: Audrius Rackauskas
-*/
-
 import Observables from './observables.js';
+/**
+ * A class that mounts observables
+ */
 export default class HorionFront {
-    constructor() {
-        this.scope = {};
-    }
- 
-    mount() {
-        const observablesLib = new Observables()
-        observablesLib.register();
-        this.scope = observablesLib.observables
-    }
+  /**
+    * sets scope object
+    */
+  constructor() {
+    this.scope = {};
+  }
 
-    unmount() {
+  /**
+    * mounts observables
+    */
+  mount() {
+    const observablesLib = new Observables();
+    observablesLib.register();
+    this.scope = observablesLib.observables;
+  }
 
-    }
+  /**
+    * unmounts observables
+    */
+  unmount() {
 
+  }
 }

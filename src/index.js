@@ -29,11 +29,11 @@ import hot from './utils/wrapper.js';
 
 // var scope = horion.mount()
 hot.testbinder.onChange = function(newVal, oldVal) {
-    // console.log('el', this)
-    // console.log('oldVal', oldVal)
-    // console.log('newVal', newVal)
-}
+  // console.log('el', this)
+  // console.log('oldVal', oldVal)
+  // console.log('newVal', newVal)
+};
 setTimeout(() => {
-    hot.testbinder = "bulka"
-    // console.log('scope', hot.testbinder)
-}, 4000)
+  hot.testbinder = 'bulka';
+  // console.log('scope', hot.testbinder)
+}, 4000);

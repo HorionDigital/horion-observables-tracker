@@ -1,14 +1,12 @@
-
-/*
-Horion Hidration - SSR first javascript framework
-Author: Audrius Rackauskas
-*/
-
+/**
+ * Objerves Chnages in the object.
+ * @param {Object} obj The first number.
+ * @return {String} Returns values accordingly.
+ */
 const IndexedObject = new Proxy(obj, {
-        get: function (target, prop) {
-            console.log(target, prop)
-            return target[name]
-        }
-    }
-})
-  
+  get: (target, prop) => {
+    console.log(target, prop);
+    return target[name];
+  },
+});
+export default IndexedObject;
