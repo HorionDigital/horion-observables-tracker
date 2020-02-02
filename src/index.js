@@ -47,6 +47,10 @@ function calculate(pension, age) {
   amount = ((totalAge + 1) * 3.14 * (totalPension + 1));
   hot.codeOnly = amount.toLocaleString();
 }
+hot.codeOnly = 1;
+hot.codeOnly.onChange = function(newVal) {
+  console.log(newVal)
+}
 
 // hot.codeOnly = "12321321321";
 setTimeout(() => {
