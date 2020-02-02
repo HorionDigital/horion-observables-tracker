@@ -28,12 +28,28 @@ import hot from './utils/wrapper.js';
 // }
 
 // var scope = horion.mount()
-hot.testbinder.onChange = function(newVal, oldVal) {
-  // console.log('el', this)
-  // console.log('oldVal', oldVal)
-  // console.log('newVal', newVal)
+hot.pension.onChange = function(newVal) {
+  calculate(newVal, null)
 };
+hot.age.onChange = function(newVal) {
+  calculate(null, newVal)
+}
+let amount = 0;
+let totalPension = 0;
+let totalAge = 0;
+/**
+ * @param {Number} pension slider value
+ * @param {Number} age slider value
+ */
+function calculate(pension, age) {
+  totalPension = (pension ? pension : totalPension);
+  totalAge = (age ? age : totalAge);
+  amount = ((totalAge + 1) * 3.14 * (totalPension + 1));
+  hot.codeOnly = amount.toLocaleString();
+}
+
+// hot.codeOnly = "12321321321";
 setTimeout(() => {
-  hot.testbinder = 'bulka';
+  // hot.testbinder = 'bulka';
   // console.log('scope', hot.testbinder)
 }, 4000);
