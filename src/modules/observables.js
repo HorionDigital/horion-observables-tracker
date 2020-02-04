@@ -7,7 +7,9 @@ export default class Observables {
     * A class that can return the number 10
     */
   constructor() {
-    this.observables = this.observablesProxy({});
+    this.observables = this.observablesProxy({
+      $onChange: null,
+    });
     this.config = {
       attributeOldValue: true,
       attributes: true,
@@ -17,6 +19,7 @@ export default class Observables {
       subtree: true,
     };
     this.selector = 'hot-var';
+    // this.observables.prototype.onChange = null;
   }
   /**
     * It returns 10

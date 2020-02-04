@@ -52,6 +52,8 @@ hot.codeOnly.onChange = function(newVal) {
   console.log(newVal)
 }
 
+// hot.addEventListener('onChange', (e) => console.log(e));
+
 // hot.codeOnly = "12321321321";
 setTimeout(() => {
   // hot.testbinder = 'bulka';
